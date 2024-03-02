@@ -15,8 +15,7 @@
   <name>petclinic</name>
 
   <properties>
-
-    <!-- Generic properties -->
+      <!-- Generic properties -->
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -26,11 +25,14 @@
     <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
     <webjars-jquery.version>2.2.4</webjars-jquery.version>
     <wro4j.version>1.8.0</wro4j.version>
+    <jacoco.version>0.8.7</jacoco.version>
+    <sonar.organization>berthe06-spring-petclinic</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
-    <jacoco.version>0.8.2</jacoco.version>
-
-  <sonar.organization>berthe06-spring-petclinic</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>    
+    <sonar.language>java</sonar.language>    
+    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 
   </properties>
 
