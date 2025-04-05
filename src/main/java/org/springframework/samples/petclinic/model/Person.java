@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic.model;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotEmpty;
+import java.time.LocalDate;
 
 /**
  * Simple JavaBean domain object representing an person.
@@ -34,6 +35,21 @@ public class Person extends BaseEntity {
     @Column(name = "last_name")
     @NotEmpty
     private String lastName;
+
+    @Column(name = "date_of_birth", nullable = true)
+
+    private LocalDate date_of_birth;
+
+
+
+    public LocalDate getDateOfBirth() {
+        return date_of_birth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.date_of_birth = dateOfBirth;
+    }
+
 
     public String getFirstName() {
         return this.firstName;
